@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Edlo - Professional DJ Services | Weddings, Events, Clubs</title>
+    <meta name="description"
+        content="DJ Edlo - Professional DJ services for weddings, corporate events, and clubs. Book now for an unforgettable musical experience.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">DJ EDLO</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Book Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>DJ EDLO</h1>
+            <p class="hero-subtitle">Bringing Energy to Every Event</p>
+            <p class="hero-description">Professional DJ services for weddings, corporate events, clubs, and private
+                parties</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">Book Now</a>
+                <a href="#music" class="btn btn-secondary">Listen to Mixes</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800" alt="DJ Edlo performing">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About DJ Edlo</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>With over 8 years of experience, DJ Edlo has been setting dance floors on fire across the region.
+                        Specializing in weddings, corporate events, and club nights, I bring the perfect blend of
+                        professionalism and energy to every performance.</p>
+                    <p>My passion for music spans multiple genres - from chart-topping hits to classic throwbacks,
+                        electronic dance music to smooth R&B. I work closely with clients to create the perfect
+                        soundtrack for their special events.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Events Performed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>8+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1589578236639-5593484f3318?w=600"
+                        alt="DJ Edlo in action">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music">
+        <div class="container">
+            <h2>Listen to My Mixes</h2>
+            <div class="music-grid">
+                <div class="mix-card">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400" alt="Wedding Mix">
+                    <div class="mix-info">
+                        <h3>Wedding Classics Mix</h3>
+                        <p>Perfect blend of romantic and danceable hits</p>
+                        <button class="play-btn" onclick="playMix('wedding')">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="mix-card">
+                    <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400" alt="Club Mix">
+                    <div class="mix-info">
+                        <h3>Club Energy Mix</h3>
+                        <p>High-energy EDM and house tracks</p>
+                        <button class="play-btn" onclick="playMix('club')">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+                <div class="mix-card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400" alt="Corporate Mix">
+                    <div class="mix-info">
+                        <h3>Corporate Event Mix</h3>
+                        <p>Professional and upbeat background music</p>
+                        <button class="play-btn" onclick="playMix('corporate')">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Embedded Music Player (SoundCloud example) -->
+            <div class="music-player">
+                <h3>Featured Mix - Summer 2024</h3>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Event Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500" alt="Wedding Event">
+                    <div class="overlay">
+                        <span>Wedding Reception</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=500" alt="Club Night">
+                    <div class="overlay">
+                        <span>Club Night</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500" alt="Corporate Event">
+                    <div class="overlay">
+                        <span>Corporate Event</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=500" alt="Private Party">
+                    <div class="overlay">
+                        <span>Private Party</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=500" alt="Festival">
+                    <div class="overlay">
+                        <span>Music Festival</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1589578236639-5593484f3318?w=500" alt="Birthday Party">
+                    <div class="overlay">
+                        <span>Birthday Party</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services & Packages</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wedding DJ</h3>
+                    <p>Complete wedding entertainment with ceremony, cocktail hour, and reception music</p>
+                    <ul>
+                        <li>Pre-wedding consultation</li>
+                        <li>Professional MC services</li>
+                        <li>Custom playlist creation</li>
+                        <li>High-quality sound system</li>
+                        <li>Wireless microphone</li>
+                    </ul>
+                    <div class="price">Starting at $1,200</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Events</h3>
+                    <p>Professional DJ services for corporate functions, holiday parties, and team building events</p>
+                    <ul>
+                        <li>Background music during dinner</li>
+                        <li>Dance music for party portion</li>
+                        <li>Professional attire</li>
+                        <li>Early setup and sound check</li>
+                        <li>Corporate-friendly music selection</li>
+                    </ul>
+                    <div class="price">Starting at $800</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Private Parties</h3>
+                    <p>Birthday parties, anniversary celebrations, graduation parties, and more</p>
+                    <ul>
+                        <li>Custom playlist based on your preferences</li>
+                        <li>Interactive games and activities</li>
+                        <li>Party lighting included</li>
+                        <li>Requests taken throughout event</li>
+                        <li>Flexible timing</li>
+                    </ul>
+                    <div class="price">Starting at $600</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"DJ Edlo made our wedding absolutely perfect! He kept the dance floor packed all night and played
+                        exactly the music we wanted. Highly recommend!"</p>
+                    <div class="client-info">
+                        <strong>Sarah & Mike Johnson</strong>
+                        <span>Wedding - June 2024</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Professional, punctual, and incredibly talented! DJ Edlo handled our corporate holiday party
+                        flawlessly. Great mix of music that appealed to all ages."</p>
+                    <div class="client-info">
+                        <strong>TechCorp Inc.</strong>
+                        <span>Corporate Event - December 2023</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best DJ we've ever had for our annual fundraiser! The energy was incredible, and DJ Edlo really
+                        understood how to read the crowd."</p>
+                    <div class="client-info">
+                        <strong>Local Charity Foundation</strong>
+                        <span>Fundraiser - March 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>Book DJ Edlo</h2>
+            <div class="booking-content">
+                <div class="booking-info">
+                    <h3>Ready to make your event unforgettable?</h3>
+                    <p>Fill out the form below with your event details, and I'll get back to you within 24 hours with
+                        availability and pricing.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>book@djedlo.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Available throughout the region</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Event Date *</label>
+                        <input type="date" id="eventDate" name="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventType">Event Type *</label>
+                        <select id="eventType" name="eventType" required>
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="club">Club/Bar</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestCount">Expected Guest Count</label>
+                        <input type="number" id="guestCount" name="guestCount" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="venue">Venue Name/Location</label>
+                        <input type="text" id="venue" name="venue">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Tell me more about your event, music preferences, special requests, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DJ EDLO</h3>
+                    <p>Professional DJ services for weddings, corporate events, and private parties. Creating
+                        unforgettable musical experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Wedding DJ</li>
+                        <li>Corporate Events</li>
+                        <li>Private Parties</li>
+                        <li>Club Nights</li>
+                        <li>MC Services</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> book@djedlo.com</li>
+                        <li><i class="fas fa-calendar"></i> Available 7 days a week</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DJ Edlo. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+                        Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
