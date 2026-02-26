@@ -384,26 +384,4 @@
     </div>
   </footer>
 
-  <script>
-    // Scroll-triggered fade-in
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.section, .mix-card, .service-card, .testi-card, .gallery-item').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
-
-    // Sticky nav
-    window.addEventListener('scroll', () => {
-      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
-    });
-  </script>
-
-</body>
 </html>
