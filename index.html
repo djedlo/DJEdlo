@@ -294,80 +294,80 @@
     </div>
   </section>
 
-  <!-- BOOKING -->
-  <section class="booking section" id="booking">
-    <div class="container-center">
-      <p class="section-label">// contact</p>
-      <h2 class="section-title center">Book <span class="accent">DJ Edlo</span></h2>
-      <p class="booking-sub">Ready to make your event unforgettable? Fill out the form and I'll get back to you within 24 hours.</p>
+ <!-- BOOKING -->
+<section class="booking section" id="booking">
+  <div class="container-center">
+    <p class="section-label">// contact</p>
+    <h2 class="section-title center">Book <span class="accent">DJ Edlo</span></h2>
+    <p class="booking-sub">Ready to make your event unforgettable? Fill out the form and I'll get back to you within 24 hours.</p>
 
-      <div class="booking-wrap">
-        <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <span>(773) 809-3356</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">✉️</span>
-            <span>info.bodegabeatz@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span>Available throughout the region</span>
-          </div>
-        </div>
-        <form class="booking-form" onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" placeholder="Your name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" placeholder="your@email.com" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" placeholder="(555) 000-0000" />
-            </div>
-            <div class="form-group">
-              <label for="date">Event Date *</label>
-              <input type="date" id="date" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="type">Event Type *</label>
-              <select id="type">
-                <option value="">Select Event Type</option>
-                <option>Wedding</option>
-                <option>Corporate Event</option>
-                <option>Birthday Party</option>
-                <option>Anniversary</option>
-                <option>Club/Bar</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="guests">Expected Guest Count</label>
-              <input type="number" id="guests" placeholder="e.g. 100" />
-            </div>
-          </div>
-          <div class="form-group full">
-            <label for="venue">Venue Name / Location</label>
-            <input type="text" id="venue" placeholder="Venue or city" />
-          </div>
-          <div class="form-group full">
-            <label for="details">Additional Details</label>
-            <textarea id="details" rows="4" placeholder="Tell me more about your event..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-submit">Send Booking Request ↗</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    <div class="booking-wrap">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <span>(773) 809-3356</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <span>info.bodegabeatz@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>Available throughout the region</span>
+        </div>
+      </div>
+      <form class="booking-form" action="https://formspree.io/f/mzdawpjb" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="date">Event Date *</label>
+            <input type="date" id="date" name="event_date" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="type">Event Type *</label>
+            <select id="type" name="event_type">
+              <option value="">Select Event Type</option>
+              <option>Wedding</option>
+              <option>Corporate Event</option>
+              <option>Birthday Party</option>
+              <option>Anniversary</option>
+              <option>Club/Bar</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guests">Expected Guest Count</label>
+            <input type="number" id="guests" name="guests" placeholder="e.g. 100" />
+          </div>
+        </div>
+        <div class="form-group full">
+          <label for="venue">Venue Name / Location</label>
+          <input type="text" id="venue" name="venue" placeholder="Venue or city" />
+        </div>
+        <div class="form-group full">
+          <label for="details">Additional Details</label>
+          <textarea id="details" name="details" rows="4" placeholder="Tell me more about your event..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">Send Booking Request ↗</button>
+      </form>
+    </div>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer class="footer">
