@@ -184,24 +184,20 @@
           <div class="gallery-caption">Wedding Reception</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=500" alt="Club Night" />
-          <div class="gallery-caption">Club Night</div>
+          <img src="https://images.unsplash.com/photo-1513871455877-a7e01e5e01a6?w=500" alt="Club Performance" />
+          <div class="gallery-caption">Club Performance</div>
         </div>
         <div class="gallery-item">
-          <img src="images/corporate-event.jpeg" alt="Corporate Event" />
+          <img src="https://images.unsplash.com/photo-1514613535308-eb5400a3e257?w=500" alt="Corporate Event" />
           <div class="gallery-caption">Corporate Event</div>
         </div>
-        <div class="gallery-item g-wide">
-          <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=500" alt="Private Party" />
-          <div class="gallery-caption">Private Party</div>
+        <div class="gallery-item g-tall">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500" alt="Live Mixing" />
+          <div class="gallery-caption">Live Mixing</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=500" alt="Festival" />
-          <div class="gallery-caption">Music Festival</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1589578236639-5593484f3318?w=500" alt="Birthday Party" />
-          <div class="gallery-caption">Birthday Party</div>
+          <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500" alt="DJ Setup" />
+          <div class="gallery-caption">Professional Setup</div>
         </div>
       </div>
     </div>
@@ -211,30 +207,29 @@
   <section class="services section" id="services">
     <div class="container-center">
       <p class="section-label">// services</p>
-      <h2 class="section-title center">Packages &amp; <span class="accent">Pricing</span></h2>
-      <div class="services-grid">
+      <h2 class="section-title center">DJ <span class="accent">Services</span></h2>
+
+      <div class="service-grid">
         <div class="service-card" style="--delay:0s">
           <div class="service-icon">💍</div>
-          <h3>Wedding DJ</h3>
-          <p>Complete wedding entertainment with ceremony, cocktail hour, and reception music</p>
+          <h3>Weddings</h3>
+          <p>Make your special day unforgettable with premium DJ services</p>
           <ul class="service-list">
-            <li>Pre-wedding consultation</li>
-            <li>Professional MC services</li>
-            <li>Custom playlist creation</li>
-            <li>High-quality sound system</li>
-            <li>Wireless microphone</li>
+            <li>Ceremony &amp; reception coverage</li>
+            <li>Custom timeline coordination</li>
+            <li>Cocktail hour entertainment</li>
+            <li>Dance floor management</li>
+            <li>Professional lighting options</li>
           </ul>
           <div class="service-price">Starting at <span>$1,200</span></div>
-          <a href="#booking" class="btn btn-outline">Book This</a>
+          <a href="#booking" class="btn btn-primary">Book Now</a>
         </div>
-        <div class="service-card featured" style="--delay:0.1s">
-          <div class="service-badge">Most Popular</div>
+
+        <div class="service-card" style="--delay:0.1s">
           <div class="service-icon">🏢</div>
           <h3>Corporate Events</h3>
-          <p>Professional DJ for corporate functions, holiday parties, and team building events</p>
+          <p>Professional DJ services for conferences, galas, and team celebrations</p>
           <ul class="service-list">
-            <li>Background music during dinner</li>
-            <li>Dance music for party portion</li>
             <li>Professional attire</li>
             <li>Early setup &amp; sound check</li>
             <li>Corporate-friendly selection</li>
@@ -309,7 +304,7 @@
           </div>
           <div class="contact-item">
             <span class="contact-icon">✉️</span>
-            <span>info.bodegabeatz@gmail.com</span>
+            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0968676f66276b666d6c6e686b6c687d73496e64686065276a6664">[email&#160;protected]</a></span>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
@@ -387,7 +382,7 @@
   </footer>
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const form = document.getElementById('booking-form');
   const btn = form.querySelector('.btn-submit');
   const status = document.getElementById('form-status');
@@ -410,19 +405,23 @@
         status.className = 'form-status success';
         status.textContent = "Request sent! We'll get back to you within 24 hours.";
         form.reset();
+        btn.disabled = false;
+        btn.textContent = 'Send Booking Request ↗';
       } else {
         const json = await response.json();
         const msg = json.errors ? json.errors.map(function(err) { return err.message; }).join(', ') : 'Something went wrong. Please try again.';
         status.className = 'form-status error';
         status.textContent = msg;
+        btn.disabled = false;
+        btn.textContent = 'Send Booking Request ↗';
       }
     } catch (err) {
       status.className = 'form-status error';
-      status.textContent = 'Network error. Please try again or email us directly at info.bodegabeatz@gmail.com';
-    } finally {
+      status.textContent = 'Network error: ' + err.message;
       btn.disabled = false;
       btn.textContent = 'Send Booking Request ↗';
     }
   });
 </script>
+</body>
 </html>
