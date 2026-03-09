@@ -188,7 +188,7 @@
           <div class="gallery-caption">Club Night</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1491684692891-0c89a1d2a05e?w=500" alt="Corporate Event" />
+          <img src="images/corporate-event.jpeg" alt="Corporate Event" />
           <div class="gallery-caption">Corporate Event</div>
         </div>
         <div class="gallery-item g-wide">
@@ -212,7 +212,7 @@
     <div class="container-center">
       <p class="section-label">// services</p>
       <h2 class="section-title center">Packages &amp; <span class="accent">Pricing</span></h2>
-      <div class="services-grid">
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
         <div class="service-card" style="--delay:0s">
           <div class="service-icon">💍</div>
           <h3>Wedding DJ</h3>
@@ -254,6 +254,20 @@
             <li>Flexible timing</li>
           </ul>
           <div class="service-price">Starting at <span>$600</span></div>
+          <a href="#booking" class="btn btn-outline">Book This</a>
+        </div>
+        <div class="service-card" style="--delay:0.3s">
+          <div class="service-icon">🎤</div>
+          <h3>Karaoke Services</h3>
+          <p>Professional karaoke entertainment for homes, bars, venues, and events of all sizes</p>
+          <ul class="service-list">
+            <li>At-home karaoke nights</li>
+            <li>Bar &amp; venue karaoke hosting</li>
+            <li>Event &amp; party karaoke</li>
+            <li>Massive song library</li>
+            <li>Pro audio &amp; mic setup</li>
+          </ul>
+          <div class="service-price">Starting at <span>$750</span></div>
           <a href="#booking" class="btn btn-outline">Book This</a>
         </div>
       </div>
@@ -309,7 +323,7 @@
           </div>
           <div class="contact-item">
             <span class="contact-icon">✉️</span>
-            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0968676f66276b666d6c6e686b6c687d73496e64686065276a6664">[email&#160;protected]</a></span>
+            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d74737b72337f7279787a7c7f787c69675d7a707c7471337e7270">[email&#160;protected]</a></span>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
@@ -410,23 +424,12 @@
         status.className = 'form-status success';
         status.textContent = "Request sent! We'll get back to you within 24 hours.";
         form.reset();
-        btn.disabled = false;
-        btn.textContent = 'Send Booking Request ↗';
       } else {
         const json = await response.json();
         const msg = json.errors ? json.errors.map(function(err) { return err.message; }).join(', ') : 'Something went wrong. Please try again.';
         status.className = 'form-status error';
         status.textContent = msg;
-        btn.disabled = false;
-        btn.textContent = 'Send Booking Request ↗';
       }
     } catch (err) {
       status.className = 'form-status error';
-      status.textContent = 'Network error: ' + err.message;
-      btn.disabled = false;
-      btn.textContent = 'Send Booking Request ↗';
-    }
-  });
-</script>
-</body>
-</html>
+  
