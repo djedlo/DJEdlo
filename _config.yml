@@ -1,0 +1,8 @@
+# GitHub Pages configuration for BodegaBeatz
+include:
+  - sitemap.xml
+  - robots.txt
+
+# Prevent Jekyll from processing sitemap.xml as HTML
+exclude:
+  - "*.md"
