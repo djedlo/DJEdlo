@@ -682,7 +682,7 @@
           </div>
           <div class="contact-item">
             <span class="contact-icon">✉️</span>
-            <a href="/cdn-cgi/l/email-protection#81e8efe7eeafe3eee5e4e6e0e3e4e0f5fbc1e6ece0e8edafe2eeec" style="color:inherit;text-decoration:none;">Email for More Information — <span class="__cf_email__" data-cfemail="a2cbccc4cd8cc0cdc6c7c5c3c0c7c3d6d8e2c5cfc3cbce8cc1cdcf">[email&#160;protected]</span></a>
+            <a href="mailto:info.bodegabeatz@gmail.com" style="color:inherit;text-decoration:none;">Email for More Information — info.bodegabeatz@gmail.com</a>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
@@ -776,9 +776,9 @@
   </footer>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const form = document.getElementById('booking-form');
-  const btn = form.querySelector('.btn-submit');
+  const btn  = form.querySelector('.btn-submit');
   const status = document.getElementById('form-status');
 
   form.addEventListener('submit', async function (e) {
@@ -797,12 +797,22 @@
 
       if (response.ok) {
         status.className = 'form-status success';
-        status.textContent = "Request sent! We'll get back to you within 24 hours.";
+        status.textContent = "Request sent! We\'ll get back to you within 24 hours.";
         form.reset();
       } else {
         const json = await response.json();
-        const msg = json.errors ? json.errors.map(function(err) { return err.message; }).join(', ') : 'Something went wrong. Please try again.';
+        const msg = json.errors
+          ? json.errors.map(function(err) { return err.message; }).join(', ')
+          : 'Something went wrong. Please try again.';
         status.className = 'form-status error';
         status.textContent = msg;
       }
-    } catch 
+    } catch (err) {
+      status.className = 'form-status error';
+      status.textContent = 'Network error. Please try again or call (773) 809-3356.';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send Booking Request ↗';
+    }
+  });
+</script></body></html>
