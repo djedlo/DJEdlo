@@ -146,6 +146,92 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- SCROLLING REVIEWS STRIP STYLES -->
+  <style>
+    .reviews-strip-wrap {
+      position: relative;
+      margin-top: 3rem;
+      overflow: hidden;
+    }
+    .reviews-strip-label {
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.05em;
+    }
+    .reviews-strip {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+    .reviews-track {
+      display: flex;
+      gap: 1.2rem;
+      width: max-content;
+      animation: scrollReviews 40s linear infinite;
+    }
+    .reviews-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes scrollReviews {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .review-chip {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(232,255,0,0.15);
+      border-radius: 12px;
+      padding: 1rem 1.4rem;
+      min-width: 280px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: border-color 0.3s;
+      cursor: default;
+    }
+    .review-chip:hover {
+      border-color: rgba(232,255,0,0.5);
+    }
+    .review-stars {
+      color: #e8ff00;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+    .review-text {
+      color: #ccc;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .review-author {
+      color: #e8ff00;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .reviews-strip-fade-left,
+    .reviews-strip-fade-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .reviews-strip-fade-left {
+      left: 0;
+      background: linear-gradient(to right, #080a0f, transparent);
+    }
+    .reviews-strip-fade-right {
+      right: 0;
+      background: linear-gradient(to left, #080a0f, transparent);
+    }
+  </style>
 </head>
 <body>
 
@@ -444,6 +530,121 @@
           </div>
         </div>
       </div>
+
+      <!-- SCROLLING GOOGLE REVIEWS STRIP -->
+      <div class="reviews-strip-wrap">
+        <p class="reviews-strip-label">
+          <img src="https://www.google.com/favicon.ico" alt="Google" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;" />
+          Google Reviews
+          <span style="color:#e8ff00;margin-left:8px;">★★★★★</span>
+          <span style="color:#aaa;font-size:0.8rem;margin-left:6px;">5.0 · 50+ Reviews</span>
+        </p>
+        <div class="reviews-strip">
+          <div class="reviews-track">
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Best DJ in Chicago! Had everyone on the dance floor all night!"</span>
+              <span class="review-author">— Maria G.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"DJ Edlo absolutely killed it at our wedding. Perfect song selection!"</span>
+              <span class="review-author">— James &amp; Lisa R.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Incredible Latin DJ! The crowd went wild. Will book again for sure."</span>
+              <span class="review-author">— Carlos M.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Our corporate event was a huge success thanks to DJ Edlo. So professional!"</span>
+              <span class="review-author">— Sandra T.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"The karaoke night was a blast! Everyone had so much fun. Highly recommend!"</span>
+              <span class="review-author">— Mike D.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"DJ Edlo kept the energy high all night. Best birthday party ever!"</span>
+              <span class="review-author">— Ashley P.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Amazing DJ for our quinceañera! He knew every song we requested."</span>
+              <span class="review-author">— Rodriguez Family</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Hired DJ Edlo for our club night — packed house all night long!"</span>
+              <span class="review-author">— Tony V.</span>
+            </div>
+
+            <!-- DUPLICATE SET for seamless loop -->
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Best DJ in Chicago! Had everyone on the dance floor all night!"</span>
+              <span class="review-author">— Maria G.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"DJ Edlo absolutely killed it at our wedding. Perfect song selection!"</span>
+              <span class="review-author">— James &amp; Lisa R.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Incredible Latin DJ! The crowd went wild. Will book again for sure."</span>
+              <span class="review-author">— Carlos M.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Our corporate event was a huge success thanks to DJ Edlo. So professional!"</span>
+              <span class="review-author">— Sandra T.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"The karaoke night was a blast! Everyone had so much fun. Highly recommend!"</span>
+              <span class="review-author">— Mike D.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"DJ Edlo kept the energy high all night. Best birthday party ever!"</span>
+              <span class="review-author">— Ashley P.</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Amazing DJ for our quinceañera! He knew every song we requested."</span>
+              <span class="review-author">— Rodriguez Family</span>
+            </div>
+
+            <div class="review-chip">
+              <span class="review-stars">★★★★★</span>
+              <span class="review-text">"Hired DJ Edlo for our club night — packed house all night long!"</span>
+              <span class="review-author">— Tony V.</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="reviews-strip-fade-left"></div>
+        <div class="reviews-strip-fade-right"></div>
+      </div>
+
     </div>
   </section>
 
