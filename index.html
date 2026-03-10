@@ -11,11 +11,8 @@
   <meta name="description" content="DJ Edlo — Chicago's #1 Latin DJ, Karaoke DJ, Wedding DJ, Corporate DJ, and Club & Event DJ. 25+ years experience. Serving Chicago and surrounding areas. Book BodegaBeatz today!" />
   <meta name="keywords" content="latin dj in chicago, karaoke dj in chicago, wedding dj in chicago, corporate dj in chicago, club dj in chicago, event dj in chicago, chicago dj, dj edlo, bodegabeatz, latin music dj chicago, chicago wedding dj, best dj chicago, karaoke host chicago, private party dj chicago, dj near me chicago, hispanic dj chicago" />
   <meta name="author" content="DJ Edlo — BodegaBeatz" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="bingbot" content="index, follow" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.bodegabeatz.com/" />
-  <link rel="sitemap" type="application/xml" href="https://www.bodegabeatz.com/sitemap.xml" />
 
   <!-- ═══════════════════════════════════════════════════
        GEO / LOCAL SEO
@@ -351,7 +348,7 @@
     <div class="container-center">
       <p class="section-label">// services</p>
       <h2 class="section-title center">Packages &amp; <span class="accent">Pricing</span></h2>
-      <div class="services-grid">
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
         <div class="service-card" style="--delay:0s">
           <div class="service-icon">💍</div>
           <h3>Wedding DJ</h3>
@@ -393,6 +390,20 @@
             <li>Flexible timing</li>
           </ul>
           <div class="service-price">Starting at <span>$600</span></div>
+          <a href="#booking" class="btn btn-outline">Book This</a>
+        </div>
+        <div class="service-card" style="--delay:0.3s">
+          <div class="service-icon">🎤</div>
+          <h3>Karaoke Services</h3>
+          <p>Professional karaoke entertainment for homes, bars, venues, and events of all sizes</p>
+          <ul class="service-list">
+            <li>At-home karaoke nights</li>
+            <li>Bar &amp; venue karaoke hosting</li>
+            <li>Event &amp; party karaoke</li>
+            <li>Massive song library</li>
+            <li>Pro audio &amp; mic setup</li>
+          </ul>
+          <div class="service-price">Starting at <span>$750</span></div>
           <a href="#booking" class="btn btn-outline">Book This</a>
         </div>
       </div>
@@ -570,4 +581,10 @@
       }
     } catch (err) {
       status.className = 'form-status error';
-  
+      status.textContent = 'Network error. Please try again or call (773) 809-3356.';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send Booking Request ↗';
+    }
+  });
+</script>
