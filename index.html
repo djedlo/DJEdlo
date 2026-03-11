@@ -104,12 +104,25 @@
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Club & Event DJ Chicago" },
           "priceSpecification": { "@type": "PriceSpecification", "price": "600", "priceCurrency": "USD" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Photo Booth Rental Chicago" },
+          "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "USD" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "DJ Photo Booth Bundle Chicago" },
+          "priceSpecification": { "@type": "PriceSpecification", "price": "1500", "priceCurrency": "USD" }
         }
       ]
     },
     "sameAs": [
       "https://www.instagram.com/djedlo",
-      "https://www.facebook.com/bodegabeatz"
+      "https://www.facebook.com/bodegabeatz",
+      "https://www.corporatedjchicago.com",
+      "https://www.gigsalad.com/dj_edlo_chicago",
+      "https://www.thebash.com/latin-dj/bodega-beatz"
     ],
     "foundingDate": "1998",
     "slogan": "Bringing Energy to Every Event"
@@ -146,6 +159,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CORPORATE + FAQ RESPONSIVE STYLES -->
+  <style>
+    @media (max-width: 768px) {
+      .corporate-grid { grid-template-columns: 1fr !important; }
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: " ▼"; color: #e8ff00; float: right; }
+    details[open] summary::after { content: " ▲"; }
+    details[open] { border-color: rgba(232,255,0,0.4) !important; }
+  </style>
 
   <!-- SCROLLING REVIEWS STRIP STYLES -->
   <style>
@@ -464,13 +488,14 @@
           <div class="service-card-img"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" alt="Corporate DJ Chicago" style="width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:1rem;" /></div>
           <div class="service-icon">🏢</div>
           <h3>Corporate Events</h3>
-          <p>Professional DJ for corporate functions, holiday parties, and team building events</p>
+          <p>Chicago's go-to Corporate DJ for company parties, holiday events, galas &amp; team building</p>
           <ul class="service-list">
-            <li>Background music during dinner</li>
-            <li>Dance music for party portion</li>
-            <li>Professional attire</li>
-            <li>Early setup &amp; sound check</li>
-            <li>Corporate-friendly selection</li>
+            <li>Free planning consultation call</li>
+            <li>Custom must-play &amp; do-not-play lists</li>
+            <li>Professional MC &amp; announcements</li>
+            <li>Sound, lighting &amp; early setup</li>
+            <li>Business casual &amp; formal attire</li>
+            <li>Add Photo Booth for $500 more</li>
           </ul>
           <div class="service-price">Starting at <span>$800</span></div>
           <a href="#booking" class="btn btn-primary">Book This</a>
@@ -505,7 +530,52 @@
           <div class="service-price">Starting at <span>$750</span></div>
           <a href="#booking" class="btn btn-outline">Book This</a>
         </div>
+        <div class="service-card" style="--delay:0.4s">
+          <div class="service-card-img"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&q=80" alt="Photo Booth Rental Chicago" style="width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:1rem;" /></div>
+          <div class="service-icon">📸</div>
+          <h3>Photo Booth</h3>
+          <p>Fun, modern photo booth rental for weddings, corporate events, parties &amp; more</p>
+          <ul class="service-list">
+            <li>Unlimited photos &amp; prints</li>
+            <li>Custom branded photo strips</li>
+            <li>Fun props &amp; backdrops included</li>
+            <li>Digital sharing &amp; gallery</li>
+            <li>Bundle with DJ &amp; save!</li>
+          </ul>
+          <div class="service-price">Starting at <span>$500</span></div>
+          <a href="#booking" class="btn btn-outline">Book This</a>
+        </div>
       </div>
+
+      <!-- ── BUNDLE PACKAGES ── -->
+      <div style="margin-top:3rem;">
+        <h3 style="font-family:'Bebas Neue',sans-serif;color:#e8ff00;font-size:1.6rem;text-align:center;margin-bottom:1.5rem;letter-spacing:0.05em;">🔥 Bundle &amp; Save Packages</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;">
+          <div style="background:rgba(232,255,0,0.06);border:1px solid rgba(232,255,0,0.3);border-radius:14px;padding:1.5rem;text-align:center;">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem;">🎧 + 📸</div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;color:#e8ff00;font-size:1.2rem;margin-bottom:0.5rem;">DJ + Photo Booth</h4>
+            <p style="color:#aaa;font-size:0.8rem;font-family:'Space Mono',monospace;margin-bottom:1rem;">Perfect for weddings &amp; corporate events</p>
+            <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;margin-bottom:1rem;">Starting at $1,500</div>
+            <a href="#booking" class="btn btn-outline" style="font-size:0.8rem;">Book Bundle</a>
+          </div>
+          <div style="background:rgba(232,255,0,0.08);border:2px solid rgba(232,255,0,0.5);border-radius:14px;padding:1.5rem;text-align:center;position:relative;">
+            <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#e8ff00;color:#080a0f;font-family:'Bebas Neue',sans-serif;font-size:0.85rem;padding:2px 12px;border-radius:20px;">BEST VALUE</div>
+            <div style="font-size:1.8rem;margin-bottom:0.5rem;">🎧 + 🎤 + 📸</div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;color:#e8ff00;font-size:1.2rem;margin-bottom:0.5rem;">DJ + Karaoke + Photo Booth</h4>
+            <p style="color:#aaa;font-size:0.8rem;font-family:'Space Mono',monospace;margin-bottom:1rem;">The ultimate party experience</p>
+            <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;margin-bottom:1rem;">Starting at $1,800</div>
+            <a href="#booking" class="btn btn-primary" style="font-size:0.8rem;">Book Bundle</a>
+          </div>
+          <div style="background:rgba(232,255,0,0.06);border:1px solid rgba(232,255,0,0.3);border-radius:14px;padding:1.5rem;text-align:center;">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem;">🏢 + 📸</div>
+            <h4 style="font-family:'Bebas Neue',sans-serif;color:#e8ff00;font-size:1.2rem;margin-bottom:0.5rem;">Corporate Package</h4>
+            <p style="color:#aaa;font-size:0.8rem;font-family:'Space Mono',monospace;margin-bottom:1rem;">DJ + Photo Booth + MC services</p>
+            <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;margin-bottom:1rem;">Starting at $1,500</div>
+            <a href="#booking" class="btn btn-outline" style="font-size:0.8rem;">Book Bundle</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -658,6 +728,91 @@
     </div>
   </section>
 
+  <!-- CORPORATE DJ CHICAGO SECTION -->
+  <section class="section" id="corporate" style="background:rgba(232,255,0,0.03);border-top:1px solid rgba(232,255,0,0.1);border-bottom:1px solid rgba(232,255,0,0.1);">
+    <div class="container-center">
+      <p class="section-label">// corporate dj chicago</p>
+      <h2 class="section-title center">Chicago's Premier <span class="accent">Corporate DJ</span></h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2rem;" class="corporate-grid">
+        <div>
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80" alt="Corporate DJ Chicago BodegaBeatz" style="width:100%;height:320px;object-fit:cover;border-radius:16px;border:1px solid rgba(232,255,0,0.2);" />
+        </div>
+        <div>
+          <p style="color:#ccc;font-family:'Space Mono',monospace;font-size:0.85rem;line-height:1.8;margin-bottom:1.5rem;">
+            DJ Edlo at BodegaBeatz is Chicago's most trusted <strong style="color:#e8ff00;">Corporate DJ</strong> — bringing 25+ years of professional experience to company holiday parties, galas, award ceremonies, product launches, and team events across Chicagoland.
+          </p>
+          <p style="color:#ccc;font-family:'Space Mono',monospace;font-size:0.85rem;line-height:1.8;margin-bottom:1.5rem;">
+            Every corporate event includes a <strong style="color:#e8ff00;">free planning consultation</strong>, custom must-play &amp; do-not-play lists, professional MC services, and seamless coordination with your venue and event planner.
+          </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.5rem;">📋</div>
+              <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1rem;">Free Consultation</div>
+              <div style="color:#aaa;font-size:0.72rem;font-family:'Space Mono',monospace;">Zoom or phone call</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.5rem;">🎵</div>
+              <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1rem;">Custom Playlists</div>
+              <div style="color:#aaa;font-size:0.72rem;font-family:'Space Mono',monospace;">Must-play &amp; do-not-play</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.5rem;">🎤</div>
+              <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1rem;">MC Services</div>
+              <div style="color:#aaa;font-size:0.72rem;font-family:'Space Mono',monospace;">Professional announcements</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.5rem;">📸</div>
+              <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1rem;">Photo Booth Add-On</div>
+              <div style="color:#aaa;font-size:0.72rem;font-family:'Space Mono',monospace;">Bundle &amp; save</div>
+            </div>
+          </div>
+          <a href="#booking" class="btn btn-primary">Get a Free Corporate Quote ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" id="faq">
+    <div class="container-center">
+      <p class="section-label">// faq</p>
+      <h2 class="section-title center">Frequently Asked <span class="accent">Questions</span></h2>
+      <div style="max-width:750px;margin:2rem auto 0;display:flex;flex-direction:column;gap:1rem;">
+
+        <details style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:12px;padding:1.2rem 1.5rem;cursor:pointer;">
+          <summary style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.05em;list-style:none;">How far in advance should I book DJ Edlo?</summary>
+          <p style="color:#aaa;font-family:'Space Mono',monospace;font-size:0.8rem;line-height:1.7;margin-top:0.8rem;">We recommend booking at least 3–6 months in advance for weddings and major events, and 4–8 weeks for corporate events and parties. Summer and holiday weekends fill up fast — contact us early to secure your date!</p>
+        </details>
+
+        <details style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:12px;padding:1.2rem 1.5rem;cursor:pointer;">
+          <summary style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.05em;list-style:none;">Do you provide sound and lighting equipment?</summary>
+          <p style="color:#aaa;font-family:'Space Mono',monospace;font-size:0.8rem;line-height:1.7;margin-top:0.8rem;">Yes! DJ Edlo brings professional-grade sound systems, wireless microphones, and party lighting to every event. For larger venues we can scale up equipment to match your space perfectly.</p>
+        </details>
+
+        <details style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:12px;padding:1.2rem 1.5rem;cursor:pointer;">
+          <summary style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.05em;list-style:none;">Can we make song requests?</summary>
+          <p style="color:#aaa;font-family:'Space Mono',monospace;font-size:0.8rem;line-height:1.7;margin-top:0.8rem;">Absolutely! Every package includes custom playlist planning before your event plus live requests on the night. You can also submit must-play and do-not-play lists so we nail every moment.</p>
+        </details>
+
+        <details style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:12px;padding:1.2rem 1.5rem;cursor:pointer;">
+          <summary style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.05em;list-style:none;">Do you perform at Latin &amp; Quinceañera events?</summary>
+          <p style="color:#aaa;font-family:'Space Mono',monospace;font-size:0.8rem;line-height:1.7;margin-top:0.8rem;">Yes — this is one of our specialties! DJ Edlo is Chicago's premier Latin DJ with 25+ years of experience playing salsa, reggaeton, cumbia, merengue, bachata, and more. Perfect for quinceañeras, sweet 16s, weddings, and Latin parties.</p>
+        </details>
+
+        <details style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:12px;padding:1.2rem 1.5rem;cursor:pointer;">
+          <summary style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.05em;list-style:none;">What areas do you serve?</summary>
+          <p style="color:#aaa;font-family:'Space Mono',monospace;font-size:0.8rem;line-height:1.7;margin-top:0.8rem;">DJ Edlo serves all of Chicago and the greater Chicagoland area including Naperville, Schaumburg, Evanston, Oak Park, Aurora, Joliet, Cicero, Berwyn, Orland Park, Elmhurst, Skokie, and surrounding suburbs.</p>
+        </details>
+
+        <details style="background:rgba(255,255,255,0.04);border:1px solid rgba(232,255,0,0.15);border-radius:12px;padding:1.2rem 1.5rem;cursor:pointer;">
+          <summary style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.05em;list-style:none;">Do you offer photo booth rentals?</summary>
+          <p style="color:#aaa;font-family:'Space Mono',monospace;font-size:0.8rem;line-height:1.7;margin-top:0.8rem;">Yes! BodegaBeatz offers photo booth rentals starting at $500, including unlimited prints, custom branded strips, fun props, and a digital gallery. Bundle with DJ services and save on your total package price.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
   <!-- BOOKING -->
   <section class="booking section" id="booking">
     <div class="container-center">
@@ -682,7 +837,7 @@
           </div>
           <div class="contact-item">
             <span class="contact-icon">✉️</span>
-            <a href="mailto:info.bodegabeatz@gmail.com" style="color:inherit;text-decoration:none;">Email for More Information — info.bodegabeatz@gmail.com</a>
+            <a href="/cdn-cgi/l/email-protection#61080f070e4f030e05040600030400151b21060c00080d4f020e0c" style="color:inherit;text-decoration:none;">Email for More Information — <span class="__cf_email__" data-cfemail="a3cacdc5cc8dc1ccc7c6c4c2c1c6c2d7d9e3c4cec2cacf8dc0ccce">[email&#160;protected]</span></a>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
@@ -776,7 +931,7 @@
   </footer>
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const form = document.getElementById('booking-form');
   const btn  = form.querySelector('.btn-submit');
   const status = document.getElementById('form-status');
@@ -808,11 +963,4 @@
         status.textContent = msg;
       }
     } catch (err) {
-      status.className = 'form-status error';
-      status.textContent = 'Network error. Please try again or call (773) 809-3356.';
-    } finally {
-      btn.disabled = false;
-      btn.textContent = 'Send Booking Request ↗';
-    }
-  });
-</script></body></html>
+      
