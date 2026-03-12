@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Gallery | DJ Edlo Chicago | BodegaBeatz</title>
+  <meta name="description" content="Browse DJ Edlo's event gallery — weddings, corporate events, Latin parties, karaoke nights, quinceañeras and private parties across Chicago." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bodegabeatz.com/gallery.html" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080a0f'/%3E%3Cpath d='M16 32 C16 20 48 20 48 32' stroke='%23e8ff00' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Crect x='10' y='30' width='10' height='16' rx='5' fill='%23e8ff00'/%3E%3Crect x='44' y='30' width='10' height='16' rx='5' fill='%23e8ff00'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #080a0f;
+      --accent:   #e8ff00;
+      --accent2:  #ff3c6e;
+      --text:     #f0f0f0;
+      --muted:    #888;
+      --card-bg:  rgba(255,255,255,0.03);
+      --border:   rgba(232,255,0,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND ── */
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(232,255,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,255,0,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .noise {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8,10,15,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem; letter-spacing: 0.1em;
+      color: var(--accent); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.78rem; letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent) !important; color: var(--bg) !important;
+      padding: 0.4rem 1rem; border-radius: 4px; font-weight: 700;
+    }
+
+    /* ── HERO ── */
+    .page-hero {
+      position: relative; z-index: 1;
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+    }
+    .page-hero .label {
+      font-size: 0.78rem; color: var(--accent); letter-spacing: 0.15em;
+      margin-bottom: 1rem; display: block;
+    }
+    .page-hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.95; letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+    }
+    .page-hero h1 span { color: var(--accent); }
+    .page-hero p {
+      color: var(--muted); font-size: 0.85rem;
+      max-width: 500px; margin: 0 auto; line-height: 1.7;
+    }
+
+    /* ── FILTER TABS ── */
+    .filters {
+      position: relative; z-index: 1;
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      justify-content: center;
+      padding: 0 2rem 3rem;
+    }
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem; letter-spacing: 0.08em;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px; cursor: pointer;
+      transition: all 0.25s;
+    }
+    .filter-btn:hover {
+      border-color: var(--accent); color: var(--accent);
+    }
+    .filter-btn.active {
+      background: var(--accent); color: var(--bg);
+      border-color: var(--accent); font-weight: 700;
+    }
+
+    /* ── GALLERY GRID ── */
+    .gallery-wrap {
+      position: relative; z-index: 1;
+      padding: 0 2rem 6rem;
+      max-width: 1300px; margin: 0 auto;
+    }
+    .gallery-grid {
+      columns: 3 300px;
+      column-gap: 1rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232,255,0,0.5);
+    }
+    .gallery-item img {
+      width: 100%; display: block;
+      transition: transform 0.5s;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2rem 1rem 0.8rem;
+      background: linear-gradient(transparent, rgba(8,10,15,0.92));
+      font-size: 0.75rem; letter-spacing: 0.08em;
+      color: var(--text); opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-caption .tag {
+      display: inline-block;
+      background: var(--accent); color: var(--bg);
+      font-size: 0.65rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 3px;
+      margin-bottom: 0.3rem; letter-spacing: 0.05em;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+
+    /* hidden items */
+    .gallery-item.hidden {
+      display: none;
+    }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0; z-index: 999;
+      background: rgba(0,0,0,0.95);
+      align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      position: relative;
+      max-width: 900px; width: 100%;
+      animation: lbIn 0.3s ease;
+    }
+    @keyframes lbIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .lightbox img {
+      width: 100%; border-radius: 12px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .lightbox-caption {
+      margin-top: 1rem; text-align: center;
+      font-size: 0.8rem; color: var(--muted);
+    }
+    .lightbox-caption strong { color: var(--accent); }
+    .lb-close {
+      position: absolute; top: -2.5rem; right: 0;
+      background: none; border: none;
+      color: var(--accent); font-size: 1.8rem;
+      cursor: pointer; line-height: 1;
+    }
+    .lb-prev, .lb-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(232,255,0,0.1);
+      border: 1px solid var(--border);
+      color: var(--accent); font-size: 1.4rem;
+      width: 44px; height: 44px;
+      border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .lb-prev:hover, .lb-next:hover { background: rgba(232,255,0,0.25); }
+    .lb-prev { left: -3.5rem; }
+    .lb-next { right: -3.5rem; }
+
+    /* ── COUNT BADGE ── */
+    .count-badge {
+      text-align: center; margin-bottom: 2rem;
+      font-size: 0.78rem; color: var(--muted); letter-spacing: 0.08em;
+    }
+    .count-badge span { color: var(--accent); font-weight: 700; }
+
+    /* ── CTA SECTION ── */
+    .gallery-cta {
+      position: relative; z-index: 1;
+      text-align: center; padding: 4rem 2rem 6rem;
+      border-top: 1px solid var(--border);
+    }
+    .gallery-cta h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem; color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .gallery-cta p {
+      color: var(--muted); font-size: 0.85rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block; padding: 0.9rem 2.2rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem; letter-spacing: 0.08em;
+      border-radius: 6px; text-decoration: none;
+      transition: all 0.25s; border: none; cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent); color: var(--bg); font-weight: 700;
+    }
+    .btn-primary:hover { background: #d4eb00; transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent; color: var(--accent);
+      border: 1px solid var(--accent); margin-left: 1rem;
+    }
+    .btn-outline:hover { background: rgba(232,255,0,0.08); }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      text-align: center; padding: 4rem 2rem;
+      color: var(--muted); font-size: 0.85rem;
+      display: none;
+    }
+    .empty-state.visible { display: block; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .gallery-grid { columns: 2 160px; }
+      .lb-prev { left: -1.5rem; }
+      .lb-next { right: -1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">EDLO</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="gallery.html" style="color:var(--accent);">Gallery</a></li>
+      <li><a href="index.html#booking" class="nav-cta">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <span class="label">// event gallery</span>
+    <h1>Our <span>Events</span><br/>in Action</h1>
+    <p>Real moments from real events — weddings, corporate parties, Latin nights, karaoke, and more across Chicago.</p>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All Events</button>
+    <button class="filter-btn" data-filter="wedding">💍 Wedding</button>
+    <button class="filter-btn" data-filter="corporate">🏢 Corporate</button>
+    <button class="filter-btn" data-filter="latin">🎶 Latin / Club</button>
+    <button class="filter-btn" data-filter="karaoke">🎤 Karaoke</button>
+    <button class="filter-btn" data-filter="party">🎉 Private Party</button>
+    <button class="filter-btn" data-filter="quinceanera">👑 Quinceañera</button>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery-wrap">
+    <p class="count-badge">Showing <span id="photo-count">15</span> events</p>
+
+    <div class="gallery-grid" id="gallery-grid">
+
+      <!-- ═══════════════════════════════════════════════
+           REPLACE src="images/your-photo.jpg" with your
+           actual filenames from your GitHub images folder
+      ═══════════════════════════════════════════════ -->
+
+      <div class="gallery-item" data-category="wedding" data-caption="Wedding Reception" data-location="Chicago, IL">
+        <img src="images/gallery-wedding-1.jpg" alt="Wedding DJ Chicago BodegaBeatz" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Wedding</span><br/>Wedding Reception — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="latin" data-caption="Latin Club Night" data-location="Chicago, IL">
+        <img src="images/gallery-latin-1.jpg" alt="Latin DJ Chicago BodegaBeatz" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Latin / Club</span><br/>Latin Night — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="corporate" data-caption="Corporate Holiday Party" data-location="Downtown Chicago">
+        <img src="images/gallery-corporate-1.jpg" alt="Corporate DJ Chicago BodegaBeatz" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Corporate</span><br/>Holiday Party — Downtown</div>
+      </div>
+
+      <div class="gallery-item" data-category="quinceanera" data-caption="Quinceañera Celebration" data-location="Chicago, IL">
+        <img src="images/gallery-quinceanera-1.jpg" alt="Quinceañera DJ Chicago BodegaBeatz" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Quinceañera</span><br/>Quinceañera — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="karaoke" data-caption="Karaoke Night" data-location="Chicago Bar">
+        <img src="images/gallery-karaoke-1.jpg" alt="Karaoke DJ Chicago BodegaBeatz" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Karaoke</span><br/>Karaoke Night — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="party" data-caption="Birthday Celebration" data-location="Chicago, IL">
+        <img src="images/gallery-party-1.jpg" alt="Private Party DJ Chicago BodegaBeatz" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Private Party</span><br/>Birthday Party — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="wedding" data-caption="Wedding Dance Floor" data-location="Chicago, IL">
+        <img src="images/gallery-wedding-2.jpg" alt="Wedding DJ Chicago dance floor" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Wedding</span><br/>Wedding Dance Floor — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="latin" data-caption="Latin Party Night" data-location="Chicagoland">
+        <img src="images/gallery-latin-2.jpg" alt="Latin Party DJ Chicago" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Latin / Club</span><br/>Latin Party — Chicagoland</div>
+      </div>
+
+      <div class="gallery-item" data-category="corporate" data-caption="Corporate Gala" data-location="Chicago, IL">
+        <img src="images/gallery-corporate-2.jpg" alt="Corporate Gala DJ Chicago" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Corporate</span><br/>Corporate Gala — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="party" data-caption="Anniversary Party" data-location="Chicago, IL">
+        <img src="images/gallery-party-2.jpg" alt="Anniversary Party DJ Chicago" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Private Party</span><br/>Anniversary — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="karaoke" data-caption="Bar Karaoke Night" data-location="Chicago Bar">
+        <img src="images/gallery-karaoke-2.jpg" alt="Karaoke host Chicago bar" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Karaoke</span><br/>Bar Karaoke — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="wedding" data-caption="Wedding Ceremony Music" data-location="Chicago, IL">
+        <img src="images/gallery-wedding-3.jpg" alt="Wedding ceremony DJ Chicago" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Wedding</span><br/>Ceremony Music — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="quinceanera" data-caption="Quinceañera Dance" data-location="Chicago, IL">
+        <img src="images/gallery-quinceanera-2.jpg" alt="Quinceañera DJ Chicago dance" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Quinceañera</span><br/>Quinceañera Dance — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="latin" data-caption="Club Night Chicago" data-location="Chicago">
+        <img src="images/gallery-latin-3.jpg" alt="Club night DJ Chicago" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Latin / Club</span><br/>Club Night — Chicago</div>
+      </div>
+
+      <div class="gallery-item" data-category="corporate" data-caption="Team Building Event" data-location="Chicagoland">
+        <img src="images/gallery-corporate-3.jpg" alt="Team building event DJ Chicago" loading="lazy" />
+        <div class="gallery-caption"><span class="tag">Corporate</span><br/>Team Building — Chicagoland</div>
+      </div>
+
+    </div>
+
+    <div class="empty-state" id="empty-state">
+      No photos in this category yet — check back soon!
+    </div>
+  </div>
+
+  <!-- ICLOUD MORE PHOTOS -->
+  <div style="position:relative;z-index:1;text-align:center;padding:2rem 2rem 0;">
+    <p style="font-family:'Space Mono',monospace;font-size:0.78rem;color:#888;margin-bottom:1rem;letter-spacing:0.05em;">Want to see more? Browse the full event album:</p>
+    <a href="https://www.icloud.com/sharedalbum/#B1x5ejO17DI2iI"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.05);border:1px solid rgba(232,255,0,0.3);color:#e8ff00;font-family:'Space Mono',monospace;font-size:0.8rem;letter-spacing:0.08em;padding:0.7rem 1.6rem;border-radius:30px;text-decoration:none;transition:all 0.25s;"
+       onmouseover="this.style.background='rgba(232,255,0,0.1)';this.style.borderColor='rgba(232,255,0,0.7)'"
+       onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(232,255,0,0.3)'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8ff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      View Full Photo Album ↗
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <div class="gallery-cta">
+    <h2>Ready to Book Your Event?</h2>
+    <p>Let DJ Edlo create unforgettable moments at your next event in Chicago.</p>
+    <a href="index.html#booking" class="btn btn-primary">Book DJ Edlo Now ↗</a>
+    <a href="index.html#services" class="btn btn-outline">View Packages</a>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lb-close" id="lb-close">✕</button>
+      <button class="lb-prev" id="lb-prev">‹</button>
+      <button class="lb-next" id="lb-next">›</button>
+      <img src="" alt="" id="lb-img" />
+      <div class="lightbox-caption">
+        <strong id="lb-caption"></strong> &mdash; <span id="lb-location"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+
+    // ── FILTER LOGIC ──
+    var btns  = document.querySelectorAll('.filter-btn');
+    var items = document.querySelectorAll('.gallery-item');
+    var count = document.getElementById('photo-count');
+    var empty = document.getElementById('empty-state');
+
+    btns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        btns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter  = btn.getAttribute('data-filter');
+        var visible = 0;
+
+        items.forEach(function(item) {
+          var match = filter === 'all' || item.getAttribute('data-category') === filter;
+          item.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+
+        count.textContent = visible;
+        empty.classList.toggle('visible', visible === 0);
+      });
+    });
+
+    // ── LIGHTBOX LOGIC ──
+    var lightbox  = document.getElementById('lightbox');
+    var lbImg     = document.getElementById('lb-img');
+    var lbCaption = document.getElementById('lb-caption');
+    var lbLoc     = document.getElementById('lb-location');
+    var lbClose   = document.getElementById('lb-close');
+    var lbPrev    = document.getElementById('lb-prev');
+    var lbNext    = document.getElementById('lb-next');
+    var current   = 0;
+    var visible   = [];
+
+    function getVisible() {
+      visible = Array.from(items).filter(function(i) {
+        return !i.classList.contains('hidden');
+      });
+    }
+
+    function openLightbox(idx) {
+      getVisible();
+      current = idx;
+      var item = visible[current];
+      lbImg.src         = item.querySelector('img').src;
+      lbImg.alt         = item.querySelector('img').alt;
+      lbCaption.textContent = item.getAttribute('data-caption');
+      lbLoc.textContent     = item.getAttribute('data-location');
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    items.forEach(function(item, idx) {
+      item.addEventListener('click', function() {
+        getVisible();
+        var visIdx = visible.indexOf(item);
+        if (visIdx !== -1) openLightbox(visIdx);
+      });
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    lbNext.addEventListener('click', function() {
+      current = (current + 1) % visible.length;
+      openLightbox(current);
+    });
+
+    lbPrev.addEventListener('click', function() {
+      current = (current - 1 + visible.length) % visible.length;
+      openLightbox(current);
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') lbNext.click();
+      if (e.key === 'ArrowLeft')  lbPrev.click();
+    });
+
+  })();
+  </script>
+
+</body>
+</html>

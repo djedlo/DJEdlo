@@ -280,7 +280,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#music">Music</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#booking" class="nav-cta">Book Now</a></li>
     </ul>
@@ -950,7 +950,9 @@
       headers: { 'Accept': 'application/json' }
     })
     .then(function(res) {
-      return res.json().then(function(json) { return { ok: res.ok, json: json }; });
+      return res.json().then(function(json) {
+        return { ok: res.ok, json: json };
+      });
     })
     .then(function(result) {
       if (result.ok) {
@@ -960,7 +962,9 @@
       } else {
         var errors = result.json && result.json.errors;
         status.className = 'form-status error';
-        status.textContent = errors ? errors.map(function(e) { return e.message; }).join(', ') : 'Something went wrong. Please try again.';
+        status.textContent = errors
+          ? errors.map(function(e) { return e.message; }).join(', ')
+          : 'Something went wrong. Please try again.';
       }
     })
     .catch(function() {
