@@ -1,0 +1,4 @@
+# Force all traffic to https://www.bodegabeatz.com
+http://bodegabeatz.com/*        https://www.bodegabeatz.com/:splat  301!
+http://www.bodegabeatz.com/*    https://www.bodegabeatz.com/:splat  301!
+https://bodegabeatz.com/*       https://www.bodegabeatz.com/:splat  301!

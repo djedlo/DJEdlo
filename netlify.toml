@@ -1,0 +1,20 @@
+[[redirects]]
+  from = "http://bodegabeatz.com/*"
+  to = "https://www.bodegabeatz.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.bodegabeatz.com/*"
+  to = "https://www.bodegabeatz.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://bodegabeatz.com/*"
+  to = "https://www.bodegabeatz.com/:splat"
+  status = 301
+  force = true
+
+[build]
+  publish = "/"
