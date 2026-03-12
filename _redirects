@@ -1,4 +1,17 @@
-# Force all traffic to https://www.bodegabeatz.com
+# ── SHORTCUT URLS ──────────────────────────────────────
+# Google Review Page
+/review          https://share.google/qUtr85JIOnivJPMG3   302
+
+# Booking shortcut
+/book            https://www.bodegabeatz.com/#booking      302
+
+# Gallery shortcut
+/gallery         https://www.bodegabeatz.com/gallery.html  302
+
+# Instagram shortcut
+/instagram       https://www.instagram.com/djedlo          302
+
+# ── FORCE ALL TRAFFIC TO https://www.bodegabeatz.com ──
 http://bodegabeatz.com/*        https://www.bodegabeatz.com/:splat  301!
 http://www.bodegabeatz.com/*    https://www.bodegabeatz.com/:splat  301!
 https://bodegabeatz.com/*       https://www.bodegabeatz.com/:splat  301!
