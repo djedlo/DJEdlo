@@ -436,7 +436,7 @@
           <div class="gallery-caption">Wedding Reception</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=500" alt="Club Night" />
+          <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=500" alt="Club Night DJ Chicago" />
           <div class="gallery-caption">Club Night</div>
         </div>
         <div class="gallery-item">
@@ -444,15 +444,15 @@
           <div class="gallery-caption">Corporate Event</div>
         </div>
         <div class="gallery-item g-wide">
-          <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=500" alt="Private Party" />
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500" alt="Private Party DJ Chicago" />
           <div class="gallery-caption">Private Party</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=500" alt="Festival" />
+          <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=500" alt="Music Festival DJ Chicago" />
           <div class="gallery-caption">Music Festival</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1589578236639-5593484f3318?w=500" alt="Birthday Party" />
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Birthday Party DJ Chicago" />
           <div class="gallery-caption">Birthday Party</div>
         </div>
       </div>
@@ -934,47 +934,41 @@
   </footer
 <script>
 (function() {
-  var form   = document.getElementById('booking-form');
+  var form = document.getElementById('booking-form');
   if (!form) return;
   var btn    = form.querySelector('.btn-submit');
   var status = document.getElementById('form-status');
-
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    btn.disabled    = true;
+    btn.disabled = true;
     btn.textContent = 'Sending...';
-    status.className   = 'form-status';
+    status.className = 'form-status';
     status.textContent = '';
-
     fetch('https://formspree.io/f/mzdawpjb', {
-      method:  'POST',
-      body:    new FormData(form),
+      method: 'POST',
+      body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     })
     .then(function(res) {
-      return res.json().then(function(json) {
-        return { ok: res.ok, json: json };
-      });
+      return res.json().then(function(json) { return { ok: res.ok, json: json }; });
     })
     .then(function(result) {
       if (result.ok) {
-        status.className   = 'form-status success';
+        status.className = 'form-status success';
         status.textContent = 'Request sent! We will get back to you within 24 hours.';
         form.reset();
       } else {
         var errors = result.json && result.json.errors;
-        status.className   = 'form-status error';
-        status.textContent = errors
-          ? errors.map(function(e) { return e.message; }).join(', ')
-          : 'Something went wrong. Please try again.';
+        status.className = 'form-status error';
+        status.textContent = errors ? errors.map(function(e) { return e.message; }).join(', ') : 'Something went wrong. Please try again.';
       }
     })
     .catch(function() {
-      status.className   = 'form-status error';
+      status.className = 'form-status error';
       status.textContent = 'Network error. Please try again or call (773) 809-3356.';
     })
     .finally(function() {
-      btn.disabled    = false;
+      btn.disabled = false;
       btn.textContent = 'Send Booking Request';
     });
   });
