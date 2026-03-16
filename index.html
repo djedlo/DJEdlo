@@ -259,6 +259,21 @@
   <!-- Disable Cloudflare email obfuscation -->
   <meta name="cf-2fa-verify" content="false" />
   <!-- Contact: info.bodegabeatz@gmail.com | tel:+17738093356 -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"How far in advance should I book DJ Edlo?","acceptedAnswer":{"@type":"Answer","text":"We recommend booking at least 3-6 months in advance for weddings and major events, and 4-8 weeks for corporate events and parties. Summer and holiday weekends fill up fast."}},
+      {"@type":"Question","name":"Do you provide sound and lighting equipment?","acceptedAnswer":{"@type":"Answer","text":"Yes! DJ Edlo brings professional-grade sound systems, wireless microphones, and party lighting to every event. For larger venues we can scale up equipment to match your space."}},
+      {"@type":"Question","name":"Can we make song requests?","acceptedAnswer":{"@type":"Answer","text":"Absolutely! Every package includes custom playlist planning before your event plus live requests on the night. You can submit must-play and do-not-play lists."}},
+      {"@type":"Question","name":"Do you perform at Latin and Quinceañera events?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is one of our specialties! DJ Edlo is Chicago's premier Latin DJ with 25+ years of experience playing salsa, reggaeton, cumbia, merengue, bachata and more."}},
+      {"@type":"Question","name":"What areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"DJ Edlo serves all of Chicago and the greater Chicagoland area including Naperville, Schaumburg, Evanston, Oak Park, Aurora, Joliet, Cicero, Berwyn, Orland Park and surrounding suburbs."}},
+      {"@type":"Question","name":"Do you offer photo booth rentals?","acceptedAnswer":{"@type":"Answer","text":"Yes! BodegaBeatz offers photo booth rentals starting at $500, including unlimited prints, custom branded strips, fun props, and a digital gallery. Bundle with DJ services and save."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -954,7 +969,9 @@
       headers: { 'Accept': 'application/json' }
     })
     .then(function(res) {
-      return res.json().then(function(json) { return { ok: res.ok, json: json }; });
+      return res.json().then(function(json) {
+        return { ok: res.ok, json: json };
+      });
     })
     .then(function(result) {
       if (result.ok) {
