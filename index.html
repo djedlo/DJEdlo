@@ -280,6 +280,9 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#music">Music</a></li>
+      <li><a href="latin-dj-chicago.html">Latin DJ</a></li>
+      <li><a href="karaoke-dj-chicago.html">Karaoke DJ</a></li>
+      <li><a href="corporate-dj-chicago.html">Corporate DJ</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#booking" class="nav-cta">Book Now</a></li>
@@ -950,9 +953,7 @@
       headers: { 'Accept': 'application/json' }
     })
     .then(function(res) {
-      return res.json().then(function(json) {
-        return { ok: res.ok, json: json };
-      });
+      return res.json().then(function(json) { return { ok: res.ok, json: json }; });
     })
     .then(function(result) {
       if (result.ok) {
