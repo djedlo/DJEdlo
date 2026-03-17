@@ -169,6 +169,14 @@
     details summary::after { content: " ▼"; color: #e8ff00; float: right; }
     details[open] summary::after { content: " ▲"; }
     details[open] { border-color: rgba(232,255,0,0.4) !important; }
+  
+  .venue-card:hover {
+    border-color: rgba(255,213,0,0.6) !important;
+    background: rgba(255,213,0,0.08) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255,213,0,0.1);
+  }
+
   </style>
 
   <!-- SCROLLING REVIEWS STRIP STYLES -->
@@ -270,7 +278,7 @@
       {"@type":"Question","name":"Can we make song requests?","acceptedAnswer":{"@type":"Answer","text":"Absolutely! Every package includes custom playlist planning before your event plus live requests on the night. You can submit must-play and do-not-play lists."}},
       {"@type":"Question","name":"Do you perform at Latin and Quinceañera events?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is one of our specialties! DJ Edlo is Chicago's premier Latin DJ with 25+ years of experience playing salsa, reggaeton, cumbia, merengue, bachata and more."}},
       {"@type":"Question","name":"What areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"DJ Edlo serves all of Chicago and the greater Chicagoland area including Naperville, Schaumburg, Evanston, Oak Park, Aurora, Joliet, Cicero, Berwyn, Orland Park and surrounding suburbs."}},
-      {"@type":"Question","name":"Do you offer photo booth rentals?","acceptedAnswer":{"@type":"Answer","text":"Yes! BodegaBeatz offers photo booth rentals starting at $500, including unlimited prints, custom branded strips, fun props, and a digital gallery. Bundle with DJ services and save."}}
+      {"@type":"Question","name":"Do you offer photo booth rentals?","acceptedAnswer":{"@type":"Answer","text":"Yes! Bodega Beatz offers photo booth rentals starting at $500, including unlimited prints, custom branded strips, fun props, and a digital gallery. Bundle with DJ services and save."}}
     ]
   }
   </script>
@@ -594,6 +602,210 @@
             <div style="color:#e8ff00;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;margin-bottom:1rem;">Starting at $1,500</div>
             <a href="#booking" class="btn btn-outline" style="font-size:0.8rem;">Book Bundle</a>
           </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VENUES -->
+  <section class="venues-section" style="
+    background: linear-gradient(180deg, rgba(10,8,4,0) 0%, rgba(20,16,6,0.8) 50%, rgba(10,8,4,0) 100%);
+    border-top: 1px solid rgba(201,168,76,0.12);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  ">
+    <!-- Subtle background texture -->
+    <div style="
+      position:absolute; inset:0; pointer-events:none; opacity:0.03;
+      background-image: repeating-linear-gradient(0deg, rgba(201,168,76,1) 0px, rgba(201,168,76,1) 1px, transparent 1px, transparent 60px),
+                        repeating-linear-gradient(90deg, rgba(201,168,76,1) 0px, rgba(201,168,76,1) 1px, transparent 1px, transparent 60px);
+    "></div>
+
+    <div class="container-center" style="position:relative; z-index:1;">
+
+      <!-- Header -->
+      <div style="text-align:center; margin-bottom:4rem;">
+        <div style="
+          display:inline-flex; align-items:center; gap:1.2rem;
+          margin-bottom:1.8rem;
+        ">
+          <div style="width:40px; height:1px; background:linear-gradient(90deg, transparent, rgba(201,168,76,0.6));"></div>
+          <span style="
+            font-size:0.68rem; letter-spacing:0.25em; text-transform:uppercase;
+            color:rgba(201,168,76,0.7); font-weight:500;
+          ">An Esteemed Portfolio of Venues</span>
+          <div style="width:40px; height:1px; background:linear-gradient(90deg, rgba(201,168,76,0.6), transparent);"></div>
+        </div>
+
+        <h2 style="
+          font-family:'Bebas Neue', sans-serif;
+          font-size:clamp(2rem,4vw,3.2rem);
+          letter-spacing:0.06em;
+          color:#f0e8d6;
+          margin-bottom:1.2rem;
+          font-weight:400;
+        ">CHICAGO'S MOST DISTINGUISHED VENUES</h2>
+
+        <p style="
+          color:rgba(180,160,120,0.7); font-size:0.88rem;
+          max-width:560px; margin:0 auto; line-height:1.8;
+          font-style:italic; letter-spacing:0.02em;
+        ">For over 25 years, DJ Edlo has been the trusted entertainment partner<br>for Chicago's finest hotels, cultural institutions and premier event spaces.</p>
+      </div>
+
+      <!-- Two column layout: Luxury Hotels | Cultural & Premier Venues -->
+      <div style="
+        display:grid; grid-template-columns:1fr 1fr;
+        gap:0; max-width:860px; margin:0 auto;
+        border:1px solid rgba(201,168,76,0.15);
+      ">
+
+        <!-- LEFT: Luxury Hotels -->
+        <div style="padding:2.5rem 3rem; border-right:1px solid rgba(201,168,76,0.15);">
+          <div style="
+            font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+            color:rgba(201,168,76,0.5); margin-bottom:2rem;
+            padding-bottom:0.8rem;
+            border-bottom:1px solid rgba(201,168,76,0.1);
+          ">Luxury Hotels &amp; Resorts</div>
+
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">InterContinental Chicago</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Michigan Avenue</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Fairmont Chicago</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Millennium Park</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Loews Chicago Hotel</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Streeterville</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Marriott Marquis Chicago</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">South Loop</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Marriott Chicago O'Hare</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">O'Hare International</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Hilton Chicago</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Michigan Avenue</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Trump International Hotel &amp; Tower</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Chicago River</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Swissôtel Chicago</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Illinois Center</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- RIGHT: Cultural & Premier -->
+        <div style="padding:2.5rem 3rem;">
+          <div style="
+            font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+            color:rgba(201,168,76,0.5); margin-bottom:2rem;
+            padding-bottom:0.8rem;
+            border-bottom:1px solid rgba(201,168,76,0.1);
+          ">Cultural Institutions &amp; Premier Venues</div>
+
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Art Institute of Chicago</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Grant Park</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">The Field Museum</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Museum Campus</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Museum of Science &amp; Industry</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Hyde Park</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">London House Chicago</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">Michigan Avenue Bridge</div>
+              </div>
+            </li>
+            <li style="padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.04); display:flex; align-items:baseline; gap:0.8rem;">
+              <span style="width:4px; height:4px; border-radius:50%; background:rgba(201,168,76,0.5); flex-shrink:0; margin-bottom:2px;"></span>
+              <div>
+                <div style="color:#e8dcc8; font-size:0.88rem; font-weight:500; letter-spacing:0.03em;">Pazzo's at 311</div>
+                <div style="color:rgba(180,160,120,0.45); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:2px;">The Loop</div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Quote -->
+          <div style="
+            margin-top:2.5rem;
+            padding:1.5rem;
+            border:1px solid rgba(201,168,76,0.12);
+            background:rgba(201,168,76,0.03);
+          ">
+            <p style="
+              color:rgba(201,168,76,0.65); font-size:0.8rem;
+              line-height:1.8; font-style:italic; margin:0;
+              letter-spacing:0.02em;
+            ">"The standard of excellence expected at these venues demands a DJ who understands professionalism at the highest level. That is what DJ Edlo delivers, every single time."</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer line -->
+      <div style="text-align:center; margin-top:2.5rem;">
+        <div style="
+          display:inline-flex; align-items:center; gap:1.2rem;
+        ">
+          <div style="width:60px; height:1px; background:linear-gradient(90deg, transparent, rgba(201,168,76,0.3));"></div>
+          <span style="color:rgba(180,160,120,0.4); font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase;">
+            &amp; Hundreds More Events Across Chicagoland Since 1998
+          </span>
+          <div style="width:60px; height:1px; background:linear-gradient(90deg, rgba(201,168,76,0.3), transparent);"></div>
         </div>
       </div>
 
@@ -943,57 +1155,27 @@
       <nav class="footer-links">
         <a href="#about">About</a>
         <a href="#music">Music</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#services">Services</a>
-        <a href="#booking">Booking</a>
-      </nav>
-      <p class="footer-copy">© 2024 DJ Edlo · Bodega Beatz. All rights reserved.</p>
+        <a hre 2024 DJ Edlo · Bodega Beatz. All rights reserved.</p>
     </div>
   </footer>
-
 <script>
 (function() {
   var form = document.getElementById('booking-form');
   if (!form) return;
-  var btn    = form.querySelector('.btn-submit');
+  var btn = form.querySelector('.btn-submit');
   var status = document.getElementById('form-status');
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-    status.className = 'form-status';
-    status.textContent = '';
-    fetch('https://formspree.io/f/mzdawpjb', {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(function(res) {
-      return res.json().then(function(json) {
-        return { ok: res.ok, json: json };
-      });
-    })
+    btn.disabled = true; btn.textContent = 'Sending...';
+    status.className = 'form-status'; status.textContent = '';
+    fetch('https://formspree.io/f/mzdawpjb', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+    .then(function(res) { return res.json().then(function(json) { return { ok: res.ok, json: json }; }); })
     .then(function(result) {
-      if (result.ok) {
-        status.className = 'form-status success';
-        status.textContent = 'Request sent! We will get back to you within 24 hours.';
-        form.reset();
-      } else {
-        var errors = result.json && result.json.errors;
-        status.className = 'form-status error';
-        status.textContent = errors
-          ? errors.map(function(e) { return e.message; }).join(', ')
-          : 'Something went wrong. Please try again.';
-      }
+      if (result.ok) { status.className = 'form-status success'; status.textContent = 'Request sent! We will get back to you within 24 hours.'; form.reset(); }
+      else { var errors = result.json && result.json.errors; status.className = 'form-status error'; status.textContent = errors ? errors.map(function(e) { return e.message; }).join(', ') : 'Something went wrong. Please try again.'; }
     })
-    .catch(function() {
-      status.className = 'form-status error';
-      status.textContent = 'Network error. Please try again or call (773) 809-3356.';
-    })
-    .finally(function() {
-      btn.disabled = false;
-      btn.textContent = 'Send Booking Request';
-    });
+    .catch(function() { status.className = 'form-status error'; status.textContent = 'Network error. Please try again or call (773) 809-3356.'; })
+    .finally(function() { btn.disabled = false; btn.textContent = 'Send Booking Request'; });
   });
 })();
 </script>
