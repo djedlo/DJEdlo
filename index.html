@@ -169,6 +169,14 @@
     details summary::after { content: " ▼"; color: #e8ff00; float: right; }
     details[open] summary::after { content: " ▲"; }
     details[open] { border-color: rgba(232,255,0,0.4) !important; }
+  
+  .venue-card:hover {
+    border-color: rgba(255,213,0,0.6) !important;
+    background: rgba(255,213,0,0.08) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255,213,0,0.1);
+  }
+
   </style>
 
   <!-- SCROLLING REVIEWS STRIP STYLES -->
@@ -270,7 +278,7 @@
       {"@type":"Question","name":"Can we make song requests?","acceptedAnswer":{"@type":"Answer","text":"Absolutely! Every package includes custom playlist planning before your event plus live requests on the night. You can submit must-play and do-not-play lists."}},
       {"@type":"Question","name":"Do you perform at Latin and Quinceañera events?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is one of our specialties! DJ Edlo is Chicago's premier Latin DJ with 25+ years of experience playing salsa, reggaeton, cumbia, merengue, bachata and more."}},
       {"@type":"Question","name":"What areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"DJ Edlo serves all of Chicago and the greater Chicagoland area including Naperville, Schaumburg, Evanston, Oak Park, Aurora, Joliet, Cicero, Berwyn, Orland Park and surrounding suburbs."}},
-      {"@type":"Question","name":"Do you offer photo booth rentals?","acceptedAnswer":{"@type":"Answer","text":"Yes! BodegaBeatz offers photo booth rentals starting at $500, including unlimited prints, custom branded strips, fun props, and a digital gallery. Bundle with DJ services and save."}}
+      {"@type":"Question","name":"Do you offer photo booth rentals?","acceptedAnswer":{"@type":"Answer","text":"Yes! Bodega Beatz offers photo booth rentals starting at $500, including unlimited prints, custom branded strips, fun props, and a digital gallery. Bundle with DJ services and save."}}
     ]
   }
   </script>
@@ -597,6 +605,100 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- VENUES -->
+  <section class="venues-section section" style="background:var(--card-bg); border-top:1px solid rgba(255,213,0,0.15); border-bottom:1px solid rgba(255,213,0,0.15); padding:4rem 2rem;">
+    <div class="container-center">
+      <p class="section-label">// trusted by chicago's finest</p>
+      <h2 class="section-title center">Performed at Chicago's Most <span class="accent">Prestigious Venues</span></h2>
+      <p style="text-align:center; color:var(--text-muted); font-size:0.95rem; max-width:650px; margin:0 auto 3rem; line-height:1.7;">From 5-star hotel galas to world-renowned cultural institutions — DJ Edlo has set the soundtrack for Chicago's most exclusive events for over 25 years.</p>
+
+      <div class="venues-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.2rem; margin-bottom:2rem;">
+
+        <!-- Hotels -->
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🏨</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">InterContinental</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">CHICAGO HOTEL</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🏨</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Fairmont Chicago</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">MILLENNIUM PARK</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🏨</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Loews Chicago</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">HOTEL</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🏨</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Marriott Marquis</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">CHICAGO</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🏨</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Marriott Chicago</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">O'HARE</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🎨</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Art Institute</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">OF CHICAGO</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🦕</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">The Field Museum</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">CHICAGO</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🔬</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Museum of Science</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">& INDUSTRY</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🏨</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Hilton Chicago</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">HOTEL</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🍽️</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Pazzo's at 311</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">CHICAGO</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🌆</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">London House</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">CHICAGO</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🏙️</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Trump International</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">HOTEL & TOWER CHICAGO</div>
+        </div>
+
+        <div class="venue-card" style="background:rgba(255,213,0,0.04); border:1px solid rgba(255,213,0,0.2); border-radius:12px; padding:1.5rem 1.2rem; text-align:center; transition:all 0.3s;">
+          <div style="font-size:2rem; margin-bottom:0.6rem;">🌐</div>
+          <div style="font-weight:700; color:var(--text-primary); font-size:0.9rem; margin-bottom:0.3rem;">Swissôtel</div>
+          <div style="color:var(--text-muted); font-size:0.75rem; letter-spacing:0.05em;">CHICAGO</div>
+        </div>
+
+      </div>
+
+      <p style="text-align:center; color:var(--text-muted); font-size:0.82rem; font-style:italic;">...and hundreds more events across Chicagoland since 1998</p>
     </div>
   </section>
 
@@ -943,14 +1045,9 @@
       <nav class="footer-links">
         <a href="#about">About</a>
         <a href="#music">Music</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#services">Services</a>
-        <a href="#booking">Booking</a>
-      </nav>
-      <p class="footer-copy">© 2024 DJ Edlo · Bodega Beatz. All rights reserved.</p>
+        <a hre 2024 DJ Edlo · Bodega Beatz. All rights reserved.</p>
     </div>
   </footer>
-
 <script>
 (function() {
   var form = document.getElementById('booking-form');
@@ -969,9 +1066,7 @@
       headers: { 'Accept': 'application/json' }
     })
     .then(function(res) {
-      return res.json().then(function(json) {
-        return { ok: res.ok, json: json };
-      });
+      return res.json().then(function(json) { return { ok: res.ok, json: json }; });
     })
     .then(function(result) {
       if (result.ok) {
