@@ -1,6 +1,6 @@
 # ── SHORTCUT URLS ──────────────────────────────────────
 # Google Review Page
-/review          https://share.google/qUtr85JIOnivJPMG3   302
+/review          https://g.page/r/CbgK_t-6w4YwEBE/review   302
 
 # Booking shortcut
 /book            https://www.bodegabeatz.com/#booking      302
@@ -23,3 +23,5 @@ https://chicagokaraokedj.com/* https://www.bodegabeatz.com/karaoke-dj-chicago 30
 https://www.chicagokaraokedj.com/* https://www.bodegabeatz.com/karaoke-dj-chicago 301!
 https://djedlo.com/* https://www.bodegabeatz.com 301!
 https://www.djedlo.com/* https://www.bodegabeatz.com 301!
+https://djedlo.com/review https://g.page/r/CbgK_t-6w4YwEBE/review 301!
+https://www.djedlo.com/review https://g.page/r/CbgK_t-6w4YwEBE/review 301!
