@@ -164,6 +164,12 @@
   <style>
     @media (max-width: 768px) {
       .corporate-grid { grid-template-columns: 1fr !important; }
+      .venues-two-col { grid-template-columns: 1fr !important; }
+      .venues-two-col > div:first-child {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(201,168,76,0.15) !important;
+      }
+      .venues-two-col > div { padding: 2rem 1.5rem !important; }
     }
     details summary::-webkit-details-marker { display: none; }
     details summary::after { content: " ▼"; color: #e8ff00; float: right; }
@@ -318,7 +324,7 @@
       <p class="hero-eyebrow">Bodega Beatz Presents</p>
       <h1 class="hero-title">
         <span class="title-line" style="--i:0">DJ</span>
-        <span class="title-line accent" style="--i:1">DJ EDLO</span>
+        <span class="title-line accent" style="--i:1">EDLO</span>
       </h1>
       <p class="hero-sub">Chicago's #1 Latin DJ · Karaoke DJ · Wedding DJ</p>
       <p class="hero-desc">Professional DJ services in Chicago for weddings, corporate events, clubs, karaoke, Latin parties &amp; private events — serving the entire Chicagoland area</p>
@@ -660,8 +666,7 @@
       <div style="
         display:grid; grid-template-columns:1fr 1fr;
         gap:0; max-width:860px; margin:0 auto;
-        border:1px solid rgba(201,168,76,0.15);
-      ">
+        border:1px solid rgba(201,168,76,0.15);" class="venues-two-col">
 
         <!-- LEFT: Luxury Hotels -->
         <div style="padding:2.5rem 3rem; border-right:1px solid rgba(201,168,76,0.15);">
@@ -1162,20 +1167,43 @@
 (function() {
   var form = document.getElementById('booking-form');
   if (!form) return;
-  var btn = form.querySelector('.btn-submit');
+  var btn    = form.querySelector('.btn-submit');
   var status = document.getElementById('form-status');
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    btn.disabled = true; btn.textContent = 'Sending...';
-    status.className = 'form-status'; status.textContent = '';
-    fetch('https://formspree.io/f/mzdawpjb', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-    .then(function(res) { return res.json().then(function(json) { return { ok: res.ok, json: json }; }); })
-    .then(function(result) {
-      if (result.ok) { status.className = 'form-status success'; status.textContent = 'Request sent! We will get back to you within 24 hours.'; form.reset(); }
-      else { var errors = result.json && result.json.errors; status.className = 'form-status error'; status.textContent = errors ? errors.map(function(e) { return e.message; }).join(', ') : 'Something went wrong. Please try again.'; }
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    status.className = 'form-status';
+    status.textContent = '';
+    fetch('https://formspree.io/f/mzdawpjb', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
     })
-    .catch(function() { status.className = 'form-status error'; status.textContent = 'Network error. Please try again or call (773) 809-3356.'; })
-    .finally(function() { btn.disabled = false; btn.textContent = 'Send Booking Request'; });
+    .then(function(res) {
+      return res.json().then(function(json) { return { ok: res.ok, json: json }; });
+    })
+    .then(function(result) {
+      if (result.ok) {
+        status.className = 'form-status success';
+        status.textContent = 'Request sent! We will get back to you within 24 hours.';
+        form.reset();
+      } else {
+        var errors = result.json && result.json.errors;
+        status.className = 'form-status error';
+        status.textContent = errors
+          ? errors.map(function(e) { return e.message; }).join(', ')
+          : 'Something went wrong. Please try again.';
+      }
+    })
+    .catch(function() {
+      status.className = 'form-status error';
+      status.textContent = 'Network error. Please try again or call (773) 809-3356.';
+    })
+    .finally(function() {
+      btn.disabled = false;
+      btn.textContent = 'Send Booking Request';
+    });
   });
 })();
 </script>
