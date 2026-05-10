@@ -1,0 +1,32 @@
+# ── SHORTCUT URLS ──────────────────────────────────────
+# Google Review Page
+/review          https://g.page/r/CbgK_t-6w4YwEBE/review   302
+
+# Booking shortcut
+/book            https://www.bodegabeatz.com/#booking      302
+
+# Gallery shortcut
+/gallery         https://www.bodegabeatz.com/gallery.html  302
+
+# Instagram shortcut
+/instagram       https://www.instagram.com/djedlo          302
+
+# ── CONSOLIDATE .html DUPLICATE URLS ───────────────────
+/corporate-dj-chicago.html    /corporate-dj-chicago    301!
+/karaoke-dj-chicago.html      /karaoke-dj-chicago      301!
+/latin-dj-chicago.html        /latin-dj-chicago        301!
+
+# ── FORCE ALL TRAFFIC TO https://www.bodegabeatz.com ──
+http://bodegabeatz.com/*           https://www.bodegabeatz.com/:splat  301!
+http://www.bodegabeatz.com/*       https://www.bodegabeatz.com/:splat  301!
+https://bodegabeatz.com/*          https://www.bodegabeatz.com/:splat  301!
+https://chicagocorporatedj.com/* https://www.bodegabeatz.com/corporate-dj-chicago 301!
+https://www.chicagocorporatedj.com/* https://www.bodegabeatz.com/corporate-dj-chicago 301!
+https://corporatedjchicago.com/* https://www.bodegabeatz.com/corporate-dj-chicago 301!
+https://www.corporatedjchicago.com/* https://www.bodegabeatz.com/corporate-dj-chicago 301!
+https://chicagokaraokedj.com/* https://www.bodegabeatz.com/karaoke-dj-chicago 301!
+https://www.chicagokaraokedj.com/* https://www.bodegabeatz.com/karaoke-dj-chicago 301!
+https://djedlo.com/review https://g.page/r/CbgK_t-6w4YwEBE/review 301!
+https://www.djedlo.com/review https://g.page/r/CbgK_t-6w4YwEBE/review 301!
+https://djedlo.com/* https://www.bodegabeatz.com 301!
+https://www.djedlo.com/* https://www.bodegabeatz.com 301!
