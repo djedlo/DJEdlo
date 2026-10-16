@@ -1,3 +1,12 @@
+# ── CORPORATE DOMAIN SHORTCUTS (chicagocorporatedj.com) ──
+# Netlify uses the first matching rule. These host-specific rules must stay ABOVE the
+# generic /gallery and /google shortcuts below (which match every domain), and above the
+# chicagocorporatedj.com/* catch-all at the bottom of the file.
+https://chicagocorporatedj.com/google      https://maps.app.goo.gl/QuYHMQhTaxNB4GW69?g_st=ic  302!
+https://www.chicagocorporatedj.com/google  https://maps.app.goo.gl/QuYHMQhTaxNB4GW69?g_st=ic  302!
+https://chicagocorporatedj.com/gallery      https://www.icloud.com/sharedalbum/#B0i5ejO17DI2iI  302!
+https://www.chicagocorporatedj.com/gallery  https://www.icloud.com/sharedalbum/#B0i5ejO17DI2iI  302!
+
 # ── SHORTCUT URLS ──────────────────────────────────────
 # Google Review Page
 /review          https://g.page/r/CbgK_t-6w4YwEBE/review   302
@@ -13,15 +22,6 @@
 
 # Instagram shortcut
 /instagram       https://www.instagram.com/djedlo          302
-
-# Google Maps page (reviews) on the corporate domain.
-# Must stay above the chicagocorporatedj.com/* catch-all below, since the first match wins.
-https://chicagocorporatedj.com/google      https://maps.app.goo.gl/QuYHMQhTaxNB4GW69?g_st=ic  302!
-https://www.chicagocorporatedj.com/google  https://maps.app.goo.gl/QuYHMQhTaxNB4GW69?g_st=ic  302!
-
-# Photo gallery (iCloud shared album) on the corporate domain. Same rule: keep above the catch-all.
-https://chicagocorporatedj.com/gallery      https://www.icloud.com/sharedalbum/#B0i5ejO17DI2iI  302!
-https://www.chicagocorporatedj.com/gallery  https://www.icloud.com/sharedalbum/#B0i5ejO17DI2iI  302!
 
 # ── FORCE ALL TRAFFIC TO https://www.bodegabeatz.com ──
 http://bodegabeatz.com/*           https://www.bodegabeatz.com/:splat  301!
