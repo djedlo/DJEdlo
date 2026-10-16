@@ -2,6 +2,9 @@
 # Google Review Page
 /review          https://g.page/r/CbgK_t-6w4YwEBE/review   302
 
+# Google Maps page (all our reviews)
+/google          https://maps.app.goo.gl/QuYHMQhTaxNB4GW69?g_st=ic  302
+
 # Booking shortcut
 /book            https://www.bodegabeatz.com/#booking      302
 
