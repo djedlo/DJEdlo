@@ -19,6 +19,10 @@
 https://chicagocorporatedj.com/google      https://maps.app.goo.gl/QuYHMQhTaxNB4GW69?g_st=ic  302!
 https://www.chicagocorporatedj.com/google  https://maps.app.goo.gl/QuYHMQhTaxNB4GW69?g_st=ic  302!
 
+# Photo gallery (iCloud shared album) on the corporate domain. Same rule: keep above the catch-all.
+https://chicagocorporatedj.com/gallery      https://www.icloud.com/sharedalbum/#B0i5ejO17DI2iI  302!
+https://www.chicagocorporatedj.com/gallery  https://www.icloud.com/sharedalbum/#B0i5ejO17DI2iI  302!
+
 # ── FORCE ALL TRAFFIC TO https://www.bodegabeatz.com ──
 http://bodegabeatz.com/*           https://www.bodegabeatz.com/:splat  301!
 http://www.bodegabeatz.com/*       https://www.bodegabeatz.com/:splat  301!
